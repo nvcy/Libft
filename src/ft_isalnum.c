@@ -6,7 +6,7 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 16:48:35 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/12 16:49:37 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/13 15:43:12 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int	ft_isalnum(int c)
 {
     if(ft_isalpha(c) && ft_isdigit(c))
 		return (1);
-	rturn (0);
+	return (0);
 }

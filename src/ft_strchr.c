@@ -6,17 +6,22 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 17:28:42 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/12 17:29:48 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/14 18:28:12 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-size_t	ft_strlen(const char *s)
-{
-	int	i;
+#include "../libft.h"
 
-	i = 0;
-    while (s[i])
-		i++;
-	return (i);
+char	*ft_strchr(const char *s, int c)
+{
+    while (*s)
+    {
+        if ( *s == (char ) c)
+            return (s);
+        s++;
+    }
+    if (*s == (char ) c)
+        return (s);
+    return (NULL);
 }
