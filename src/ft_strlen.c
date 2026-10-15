@@ -6,7 +6,7 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 19:42:47 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/13 19:46:18 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/15 20:38:35 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int	len;
+	size_t	len;
 	
-	len = 0
-	while (str[len])
+	len = 0;
+	while (s[len])
 		len++;
 	return (len);
 }

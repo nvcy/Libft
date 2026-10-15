@@ -6,7 +6,7 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 18:41:13 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/14 20:03:30 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/15 18:43:36 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*strnstr(const char *haystack, const char *needle, size_t len)
 	while(i < len && haystack[i])
 	{
 		j = 0;
-		while ((j) < len - i)
+		while ((j + i) < len)
 		{
 			if (needle[j] == '\0')
 				return (&haystack[i]);
