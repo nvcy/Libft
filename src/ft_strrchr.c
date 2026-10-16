@@ -6,14 +6,14 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 18:16:44 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/14 18:40:56 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/16 13:09:08 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "../libft.h"
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int len;
 
