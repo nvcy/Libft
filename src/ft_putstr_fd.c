@@ -6,12 +6,11 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 20:02:56 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/17 20:05:27 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/18 21:20:57 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <unistd.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {

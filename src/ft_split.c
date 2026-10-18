@@ -6,13 +6,11 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 13:08:31 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/17 18:25:12 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/18 17:52:01 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 size_t	count_word(char const *s, char c)
 {
@@ -55,6 +53,18 @@ char	*copy_word(char const *s, char c, size_t *pos)
 	return (word);
 }
 
+int	mem_free(char **mem, size_t start)
+{
+	if (!mem[start])
+	{
+		while (start > 0)
+			free(mem[--start]);
+		free(mem);
+		return (1);
+	}
+	return (0);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	size;
@@ -62,6 +72,8 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	size_t	pos;
 
+	if (!s)
+		return (NULL);
 	size = count_word(s, c);
 	strs = malloc((size + 1) * sizeof(char *));
 	if (!strs)
@@ -71,6 +83,8 @@ char	**ft_split(char const *s, char c)
 	while (i < size)
 	{
 		strs[i] = copy_word(s, c, &pos);
+		if (mem_free(strs, i))
+			return (NULL);
 		i++;
 	}
 	strs[i] = NULL;
