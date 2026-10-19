@@ -6,16 +6,15 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 16:50:17 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/12 16:51:23 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/19 17:06:49 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../libft.h"
 
 int	ft_isascii(int c)
 {
-    if(c >= 0 && c <= 127)
-        return (1);
-    return (0);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }

@@ -6,16 +6,15 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 16:43:41 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/12 16:45:23 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/19 17:07:37 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../libft.h"
 
 int	ft_isdigit(int c)
 {
-    if (!(c >= '0' && c <= '9'))
-        return (0);
-    return (1);
+	if (!(c >= '0' && c <= '9'))
+		return (0);
+	return (1);
 }

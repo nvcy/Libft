@@ -6,7 +6,7 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 21:11:47 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/18 21:18:08 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/19 17:01:04 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_isspace(char c)
 	return (0);
 }
 
-int issign(char c)
+int	issign(char c)
 {
 	return (c == '-' || c == '+');
 }
@@ -27,8 +27,8 @@ int issign(char c)
 int	ft_atoi(const char *s)
 {
 	size_t	i;
-	int sign;
-	long result;
+	int		sign;
+	long	result;
 
 	i = 0;
 	sign = 1;

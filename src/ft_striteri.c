@@ -6,16 +6,16 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 19:55:29 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/17 19:58:58 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/19 17:47:18 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t i;
-	
+	size_t	i;
+
 	i = 0;
 	while (s[i])
 	{

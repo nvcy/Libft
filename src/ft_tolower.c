@@ -6,7 +6,7 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 19:54:20 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/14 19:24:37 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/19 18:06:27 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	if ( c < 123 && c > 96)
-		return (c + 32)
+	if (c < 123 && c > 96)
+		return (c + 32);
 	return (c);
 }

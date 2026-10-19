@@ -6,7 +6,7 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 21:49:07 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/18 12:01:57 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/19 17:15:05 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*current;
 	t_list	*next;
+
 	if (!lst || !*lst)
 		return ;
 	current = *lst;

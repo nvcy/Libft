@@ -6,14 +6,16 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 20:14:21 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/17 20:19:31 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/19 17:27:46 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-t_list	*ft_lstnew(void *content){
-    t_list	*new_node;
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*new_node;
+
 	new_node = malloc(sizeof(t_list));
 	if (!new_node)
 		return (NULL);

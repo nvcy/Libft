@@ -6,7 +6,7 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 18:44:05 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/16 13:14:13 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/19 18:05:26 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	while (end > start && ft_strchr(set, s1[end - 1]))
 		end--;
-	return (ft_substr(s1, start,  end - start));
+	return (ft_substr(s1, start, end - start));
 }

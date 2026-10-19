@@ -6,15 +6,14 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 17:33:38 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/12 17:40:29 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/19 17:02:13 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../libft.h"
 
 void	ft_bzero(void *s, size_t n)
 
 {
-    ft_memset(s,0,n);
+	ft_memset(s, 0, n);
 }

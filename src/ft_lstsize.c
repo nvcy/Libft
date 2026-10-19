@@ -6,7 +6,7 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 20:27:35 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/17 20:29:54 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/19 17:28:28 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 unsigned int	ft_lstsize(t_list *lst)
 {
 	unsigned int	count;
-	
+
 	count = 0;
 	while (lst)
 	{
