@@ -6,13 +6,13 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 19:12:44 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/19 17:58:12 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/20 20:54:57 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 

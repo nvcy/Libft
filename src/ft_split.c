@@ -6,13 +6,13 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 13:08:31 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/18 17:52:01 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/20 19:38:29 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-size_t	count_word(char const *s, char c)
+static size_t	count_word(char const *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -28,7 +28,7 @@ size_t	count_word(char const *s, char c)
 	return (count);
 }
 
-char	*copy_word(char const *s, char c, size_t *pos)
+static char	*copy_word(char const *s, char c, size_t *pos)
 {
 	size_t	len;
 	size_t	i;
@@ -53,7 +53,7 @@ char	*copy_word(char const *s, char c, size_t *pos)
 	return (word);
 }
 
-int	mem_free(char **mem, size_t start)
+static int	mem_free(char **mem, size_t start)
 {
 	if (!mem[start])
 	{

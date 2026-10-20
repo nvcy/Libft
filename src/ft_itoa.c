@@ -6,13 +6,13 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 18:10:00 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/19 17:12:22 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/20 19:53:27 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-size_t	lencallc(int n)
+static size_t	lencallc(int n)
 {
 	size_t	len;
 

@@ -6,7 +6,7 @@
 /*   By: amerghad <amerghad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 17:02:37 by amerghad          #+#    #+#             */
-/*   Updated: 2026/10/19 17:52:15 by amerghad         ###   ########.fr       */
+/*   Updated: 2026/10/20 19:51:55 by amerghad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		dst[i] = src[i];
 		i++;
 	}
-	dst[dstsize - 1] = '\0';
+	dst[i] = '\0';
 	return (ft_strlen(src));
 }
