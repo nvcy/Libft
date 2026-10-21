@@ -12,13 +12,22 @@
 
 #include "../libft.h"
 
+static void	put_long(int n, int fd)
+{
+	long	nbr;
+
+	nbr = n;
+	if (nbr < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nbr = -nbr;
+	}
+	if (nbr >= 10)
+		put_long(nbr / 10, fd);
+	ft_putchar_fd((nbr % 10) + '0', fd);
+}
+
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*nbr_str;
-
-	nbr_str = ft_itoa(n);
-	if (!nbr_str)
-		return ;
-	write(fd, nbr_str, ft_strlen(nbr_str));
-	free(nbr_str);
+	put_long(n, fd);
 }
