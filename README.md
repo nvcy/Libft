@@ -1,188 +1,128 @@
-This project has been created as part of the 42 curriculum by nvcy.
+📚 ***Libft — Your Very First Own Library***
+Building the foundations of C, one function at a time.
 
-Libft — Your Very First Own Library
+This project was created as part of the ***42 curriculum by nvcy.***
 
-Description
+*Libft* is a foundational C programming project focused on recreating essential functions from the standard C library, developing additional utility functions, and implementing singly linked lists.
 
-Libft is a foundational C programming project in the 42 curriculum. Its objective is to create a personal C library containing reimplementations of standard C library functions, additional string and output utilities, and linked-list manipulation functions.
+The goal is to understand how these functions work internally, strengthen memory-management skills, and build a reusable library for future C projects.
 
-The project provides an opportunity to understand how fundamental functions work internally, develop memory-management skills, and build reusable tools for future C projects.
+The result is a static library named ***libft.a***, ready to be integrated into other C programs.
 
-The library is compiled into a static archive named "libft.a", which can be linked to other C programs.
+🎯 ***Objectives***
+Master pointers, arrays, strings, and memory manipulation.
+Understand dynamic memory allocation and deallocation.
+Reimplement essential C standard library functions.
+Develop string-processing and file-descriptor output utilities.
+Work with function pointers and callbacks.
+Implement and manage singly linked lists.
+Learn static library compilation and linking.
+Write clean, reliable code that follows the 42 Norm.
+🛠️ Getting Started
+### Requirements
+cc — C compiler
+make — Build automation
+ar — Static library creation
+norminette — 42 coding standard checker
+### Installation
 
-Project requirements: Libft subject, version 19.3.
-
-Objectives
-
-- Understand pointers, arrays, strings, and memory addresses.
-- Implement low-level memory manipulation functions.
-- Understand dynamic memory allocation and deallocation.
-- Reimplement standard C library functions.
-- Work with function pointers and callbacks.
-- Implement and manipulate singly linked lists.
-- Learn static library creation and linking.
-- Develop reliable code that follows the 42 Norm.
-
-Instructions
-
-Requirements
-
-- A C compiler ("cc").
-- "make".
-- "ar", for creating the static library.
-- Norminette, for checking compliance with the 42 Norm.
-
-Compilation
-
-Clone the repository and navigate to its root directory.
+Clone the repository and build the library:
 
 git clone https://github.com/nvcy/libft.git
-cd libft
+cd *libft*
 make
 
-The build produces:
+
+The compilation generates:
 
 libft.a
 
-The Makefile must use "cc" with "-Wall -Wextra -Werror", create the archive with "ar", and avoid unnecessary relinking.
+Makefile Commands
+Command	Description
+make	Build the library
+make all	Build the library
+make clean	Remove object files
+make fclean	Remove object files and libft.a
+make re	Rebuild everything
+Using Libft
 
-Makefile rules
-
-Rule| Description
-"make"| Builds "libft.a".
-"make all"| Builds the library.
-"make clean"| Removes object files.
-"make fclean"| Removes object files and "libft.a".
-"make re"| Rebuilds the library.
-
-Using Libft in another program
-
-Include the header:
+Include the library header in your C source file:
 
 #include "libft.h"
 
-Compile and link a test program:
+
+Compile and link your program:
 
 cc -Wall -Wextra -Werror main.c -L. -lft -o test
 ./test
 
-The "-L." option searches the current directory for libraries, and "-lft" links against "libft.a".
+📦 ****Library Contents****
 
-Library Contents
+Libft contains 43 mandatory functions, divided into three parts according to subject version 19.3.
 
-The library contains 43 mandatory functions, organized into three parts according to the subject.
+Part	Description	Functions
+Part 1	Standard C library reimplementations	23
+Part 2	Additional utility functions	11
+Part 3	Singly linked-list manipulation	9
+Total	Complete mandatory library	43
 
-Part| Contents| Functions
-Part 1| Libc reimplementations| 23
-Part 2| Additional functions| 11
-Part 3| Linked-list functions| 9
-Total| Complete mandatory library| 43
+All three parts are mandatory in this subject version.
 
-There is no separate optional bonus part in this subject version: the linked-list functions in Part 3 are mandatory.
+🧩 *Part 1 — Libc Functions*
 
----
+Reimplementing standard C functions helps develop a deeper understanding of how C handles characters, strings, memory, and numeric conversions.
 
-Part 1 — Libc Functions
+Character Classification
 
-The first part consists of reimplementing standard library functions. Their names use the "ft_" prefix, and their behavior must follow the relevant manual-page specifications and the subject's requirements.
+ft_isalpha · ft_isdigit · ft_isalnum · ft_isascii · ft_isprint
 
-The implementations must not rely on external functions, except where explicitly permitted by the subject.
+String Length and Memory Manipulation
 
-1. Character classification
+ft_strlen · ft_memset · ft_bzero · ft_memcpy · ft_memmove · ft_memchr · ft_memcmp
 
-Function| Prototype| Description
-"ft_isalpha"| "int ft_isalpha(int c);"| Tests whether a character is an alphabetic letter.
-"ft_isdigit"| "int ft_isdigit(int c);"| Tests whether a character is a decimal digit.
-"ft_isalnum"| "int ft_isalnum(int c);"| Tests whether a character is alphabetic or numeric.
-"ft_isascii"| "int ft_isascii(int c);"| Tests whether a value belongs to the ASCII range.
-"ft_isprint"| "int ft_isprint(int c);"| Tests whether a character is printable.
+String Copying and Concatenation
 
-For these five functions, the subject requires a return value of "1" when the character matches the tested class and "0" otherwise.
+ft_strlcpy · ft_strlcat · ft_strdup
 
-2. String length and memory manipulation
+String Searching and Comparison
 
-Function| Prototype| Description
-"ft_strlen"| "size_t ft_strlen(const char *s);"| Calculates the length of a string, excluding its terminating null character.
-"ft_memset"| "void *ft_memset(void *s, int c, size_t n);"| Fills a memory area with a specified byte value.
-"ft_bzero"| "void ft_bzero(void *s, size_t n);"| Sets a specified number of bytes to zero.
-"ft_memcpy"| "void *ft_memcpy(void *dst, const void *src, size_t n);"| Copies bytes between non-overlapping memory regions.
-"ft_memmove"| "void *ft_memmove(void *dst, const void *src, size_t n);"| Copies bytes while allowing overlapping memory regions.
-"ft_memchr"| "void *ft_memchr(const void *s, int c, size_t n);"| Searches a memory region for a specified byte.
-"ft_memcmp"| "int ft_memcmp(const void *s1, const void *s2, size_t n);"| Compares two memory regions byte by byte.
+ft_strchr · ft_strrchr · ft_strncmp · ft_strnstr
 
-3. String copying and concatenation
+Character Conversion
 
-Function| Prototype| Description
-"ft_strlcpy"| "size_t ft_strlcpy(char *dst, const char *src, size_t size);"| Copies a string into a size-limited destination buffer.
-"ft_strlcat"| "size_t ft_strlcat(char *dst, const char *src, size_t size);"| Appends a string within the destination buffer's size limit.
-"ft_strdup"| "char *ft_strdup(const char *s);"| Allocates and returns a duplicate of a string.
+ft_toupper · ft_tolower
 
-4. String searching and comparison
+Numeric Conversion and Allocation
 
-Function| Prototype| Description
-"ft_strchr"| "char *ft_strchr(const char *s, int c);"| Locates the first occurrence of a character in a string.
-"ft_strrchr"| "char *ft_strrchr(const char *s, int c);"| Locates the last occurrence of a character in a string.
-"ft_strncmp"| "int ft_strncmp(const char *s1, const char *s2, size_t n);"| Compares up to a specified number of characters.
-"ft_strnstr"| "char *ft_strnstr(const char *haystack, const char *needle, size_t len);"| Searches for a substring within a bounded portion of another string.
+ft_atoi · ft_calloc
 
-5. Character conversion
+These functions must respect the behavior and requirements specified by the official subject and the relevant function documentation.
 
-Function| Prototype| Description
-"ft_toupper"| "int ft_toupper(int c);"| Converts a lowercase letter to uppercase.
-"ft_tolower"| "int ft_tolower(int c);"| Converts an uppercase letter to lowercase.
+✨ *Part 2 — Additional Functions*
 
-6. Numeric conversion and allocation
+This part expands the library with practical utilities for manipulating strings, applying callbacks, and writing output to file descriptors.
 
-Function| Prototype| Description
-"ft_atoi"| "int ft_atoi(const char *nptr);"| Converts the initial numeric portion of a string to an integer.
-"ft_calloc"| "void *ft_calloc(size_t nmemb, size_t size);"| Allocates memory for an array and initializes its bytes to zero.
+String Manipulation
 
-"ft_calloc" and "ft_strdup" must use "malloc" as specified by the subject.
+ft_substr · ft_strjoin · ft_strtrim · ft_split · ft_itoa
 
-For "ft_calloc", the subject explicitly requires a unique pointer value that can be passed to "free()" when either "nmemb" or "size" is zero.
+Function Pointers and Iteration
 
----
+ft_strmapi · ft_striteri
 
-Part 2 — Additional Functions
+File-Descriptor Output
 
-These functions extend the library with useful string-processing operations, function-pointer utilities, and file-descriptor output functions.
+ft_putchar_fd · ft_putstr_fd · ft_putendl_fd · ft_putnbr_fd
 
-1. String manipulation
+Memory-allocating functions must handle allocation failures correctly. In particular, ft_split returns a dynamically allocated, NULL-terminated array whose strings and array must be freed when no longer needed.
 
-Function| Prototype| Description
-"ft_substr"| "char *ft_substr(char const *s, unsigned int start, size_t len);"| Allocates and returns a substring beginning at a specified index.
-"ft_strjoin"| "char *ft_strjoin(char const *s1, char const *s2);"| Allocates a string formed by concatenating two strings.
-"ft_strtrim"| "char *ft_strtrim(char const *s1, char const *set);"| Removes characters belonging to a specified set from both ends of a string.
-"ft_split"| "char **ft_split(char const *s, char c);"| Splits a string into independently allocated strings using a delimiter.
-"ft_itoa"| "char *ft_itoa(int n);"| Converts an integer into a newly allocated decimal string.
+🔗 *Part 3 — Linked Lists*
 
-2. Function pointers and iteration
+The final part introduces dynamic data structures through singly linked lists.
 
-Function| Prototype| Description
-"ft_strmapi"| "char *ft_strmapi(char const *s, char (*f)(unsigned int, char));"| Applies a function to each character and its index, returning a newly allocated string.
-"ft_striteri"| "void ft_striteri(char *s, void (*f)(unsigned int, char *));"| Applies a function to each character by passing its index and address, allowing modification of the original string.
+Data Structure
 
-3. File-descriptor output
-
-Function| Prototype| Description
-"ft_putchar_fd"| "void ft_putchar_fd(char c, int fd);"| Writes one character to a specified file descriptor.
-"ft_putstr_fd"| "void ft_putstr_fd(char *s, int fd);"| Writes a string to a specified file descriptor.
-"ft_putendl_fd"| "void ft_putendl_fd(char *s, int fd);"| Writes a string followed by a newline.
-"ft_putnbr_fd"| "void ft_putnbr_fd(int n, int fd);"| Writes an integer in decimal notation.
-
-The additional functions that allocate memory return "NULL" if allocation fails, as specified by the subject.
-
-"ft_split" returns a dynamically allocated, "NULL"-terminated array of strings. Each string and the array itself must be released with "free()".
-
----
-
-Part 3 — Linked Lists
-
-The third part introduces singly linked lists and requires nine functions.
-
-Data structure
-
-The following structure must be declared in "libft.h":
+The t_list structure is defined in libft.h:
 
 typedef struct s_list
 {
@@ -190,103 +130,95 @@ typedef struct s_list
     struct s_list   *next;
 }   t_list;
 
-- "content" stores the address of the node's data.
-- "next" points to the following node.
-- The last node has "next == NULL".
-- An empty list is represented by a "NULL" head pointer.
 
-Linked-list functions
+Each node stores a pointer to its content and a pointer to the next node. The last node points to NULL, while an empty list is represented by a NULL head pointer.
 
-Function| Prototype| Description
-"ft_lstnew"| "t_list *ft_lstnew(void *content);"| Allocates a node, stores its content, and initializes "next" to "NULL".
-"ft_lstadd_front"| "void ft_lstadd_front(t_list **lst, t_list *new);"| Adds a node to the beginning of the list.
-"ft_lstsize"| "unsigned int ft_lstsize(t_list *lst);"| Counts the nodes in a list.
-"ft_lstlast"| "t_list *ft_lstlast(t_list *lst);"| Returns the last node of a list.
-"ft_lstadd_back"| "void ft_lstadd_back(t_list **lst, t_list *new);"| Adds a node to the end of the list.
-"ft_lstdelone"| "void ft_lstdelone(t_list *lst, void (*del)(void *));"| Deletes one node, using a callback to free its content.
-"ft_lstclear"| "void ft_lstclear(t_list **lst, void (*del)(void *));"| Deletes a list and its successors, then sets the head pointer to "NULL".
-"ft_lstiter"| "void ft_lstiter(t_list *lst, void (*f)(void *));"| Applies a function to the content of every node.
-"ft_lstmap"| "t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));"| Creates a new list by applying a function to each node's content.
+Required Functions
+Function	Purpose
+ft_lstnew	Create a new node
+ft_lstadd_front	Add a node at the beginning
+ft_lstsize	Count the nodes
+ft_lstlast	Retrieve the last node
+ft_lstadd_back	Add a node at the end
+ft_lstdelone	Delete a single node
+ft_lstclear	Delete an entire list
+ft_lstiter	Apply a function to each node
+ft_lstmap	Create a transformed copy of a list
+Memory Management
 
-Memory ownership
+Linked lists require careful handling of memory ownership:
 
-The linked-list functions require careful handling of memory ownership.
+ft_lstnew allocates a node without automatically duplicating its content.
+ft_lstdelone deletes one node without deleting its successor.
+ft_lstclear deletes the list and resets its head pointer to NULL.
+ft_lstmap must safely clean up partially allocated lists if an allocation fails.
+⚙️ Technical Requirements
 
-- "ft_lstnew" allocates the node but does not automatically duplicate its content.
-- "ft_lstdelone" deletes one node without deleting its successor.
-- "ft_lstclear" deletes the nodes and resets the list head.
-- "ft_lstmap" must clean up the partially constructed new list if allocation fails, using the supplied deletion callback where required.
+The project must comply with the official Libft subject, version 19.3.
 
----
+Compile using cc with -Wall -Wextra -Werror.
+Create the static library using ar, not libtool.
+Place the required files and libft.a at the repository root.
+Include the required Makefile rules: all, clean, fclean, and re, with $(NAME) defined.
+Avoid unnecessary relinking.
+Do not use global variables.
+Declare file-local helper functions as static when appropriate.
+Free allocated memory correctly.
+Follow the 42 Norm and the subject's function prototypes.
+Do not include restrict in the reimplemented prototypes or compile using -std=c99.
+🧪 Testing
 
-Technical Requirements
+Testing is essential for verifying correctness, edge cases, and memory safety.
 
-The project must follow the requirements of the Libft subject, version 19.3.
-
-- All files must be placed at the root of the repository.
-- Unused files must not be submitted.
-- Global variables are forbidden.
-- Helper functions should be declared "static" when their scope should be restricted to one source file.
-- Every ".c" file must compile with "-Wall -Wextra -Werror".
-- The compiler must be "cc".
-- The static library must be created using "ar"; "libtool" is forbidden.
-- "libft.a" must be created at the repository root.
-- The Makefile must contain "$(NAME)", "all", "clean", "fclean", and "re".
-- The Makefile must not perform unnecessary relinking.
-- All allocated memory must be freed when necessary.
-- Functions must not crash except when their behavior is undefined by the relevant specifications.
-
-The subject also specifies that "restrict" must not be included in the reimplemented function prototypes and that the project must not be compiled using "-std=c99".
-
-Testing
-
-Testing is recommended to verify function behavior and memory safety.
-
-Compilation and Norminette
-
+Build and Check
 make
 norminette
 make re
 
-Test program
-
+Run a Test Program
 cc -Wall -Wextra -Werror main.c -L. -lft -o test
 ./test
 
-Memory checks
+Check for Memory Leaks
 
-Where Valgrind is available:
+If Valgrind is available:
 
 valgrind --leak-check=full ./test
 
-Tests should cover ordinary inputs, empty strings, zero-length operations, boundary conditions, allocation failures where testable, overlapping memory regions, and empty or single-node linked lists.
 
-Resources
+Recommended test cases:
 
-- "42 School" (https://42.fr/) — information about the 42 curriculum.
-- "Linux man-pages" (https://man7.org/linux/man-pages/) — reference documentation for C library and system functions.
-- "The Open Group Base Specifications" (https://pubs.opengroup.org/onlinepubs/9799919799/) — POSIX specifications.
-- "GNU Make Manual" (https://www.gnu.org/software/make/manual/) — Makefile syntax and build rules.
-- "GCC Documentation" (https://gcc.gnu.org/onlinedocs/) — compiler options and C language documentation.
+Empty strings and NULL inputs where applicable.
+Zero-length memory operations.
+Boundary conditions and integer limits.
+Overlapping memory regions.
+Allocation failures where testable.
+Empty, single-node, and multi-node linked lists.
+Correct cleanup and absence of memory leaks.
+📖 Resources
+42 School — Curriculum and project information.
+Linux man-pages — C library and system function documentation.
+The Open Group Base Specifications — POSIX specifications.
+GNU Make Manual — Build automation and Makefile rules.
+GCC Documentation — Compiler options and C programming references.
+🤖 AI Usage
 
-AI usage
+AI assistance was used to organize this README and explain the purpose, interfaces, and requirements of the library functions.
 
-AI assistance was used to help organize this README and explain the purpose, interfaces, and requirements of the library functions.
+The implementation, behavior, and compliance of every function must be verified and understood by the author. Any additional AI assistance used during implementation or testing should be disclosed accurately.
 
-The function implementations, their behavior, and compliance with the official subject must be checked and understood by the author. Any additional AI assistance used during implementation or testing should be described accurately.
+👤**Author**
 
-Author
+**Abdelhamid Merghad**
 
-Abdelhamid Merghad
+****GitHub****: *@nvcy*
+📋 Project Information
+Item	Details
+Project	Libft
+Curriculum	42
+Language	C
+Output	libft.a
+Subject Version	19.3
+Mandatory Functions	43
 
-- GitHub: "@nvcy" (https://github.com/nvcy)
-
-Project information
-
-Item| Value
-Project| Libft
-Curriculum| 42
-Language| C
-Library| "libft.a"
-Subject version| 19.3
-Mandatory functions| 43
+Libft is more than a library — it's the foundation for everything that comes next in C.
